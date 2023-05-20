@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=  , initial-scale=1.0" />
+    <title>Contactos</title>
+
+    <!-- Boostrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="container">
+    <header class="d-flex justify-content-around align-items-center p-3">
+      <h1>Contactos</h1>
+      <div>
+        <a href="/">Ir a home</a>
+      </div>
+    </header>
+    <main class="p-3">
+      <div class="container">
+        <div class="row">
+          <% contacts.map((c) => { %>
+          <div class="col-md-4">
+            <div class="card m-3">
+              <div class="card-header"><b><%= c.data.name %></b></div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Número: <%= c.data.number %></li>
+                <li class="list-group-item">
+                  Dirección: <%= c.data.direction %>
+                </li>
+                <li class="list-group-item">
+                  Teléfono: <%= c.data.telefone %>
+                </li>
+              </ul>
+              <div class="card-footer">ID: <b><%= c.id %></b></div>
+              <div class="d-flex justify-content-around p-3">
+                <div>
+                  <a
+                    class="text-center p-2 text-primary"
+                    href="/edit-contact/<%= c.id%>"
+                    >Modificar</a
+                  >
+                </div>
+                <div>
+                  <a
+                    class="text-center p-2 text-danger"
+                    href="/borrar/<%= c.id%>"
+                    >Borrar</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

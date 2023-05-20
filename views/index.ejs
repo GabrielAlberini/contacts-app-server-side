@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=  , initial-scale=1.0" />
+    <title>Agenda de Contacto</title>
+
+    <!-- Boostrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="container">
+    <header class="d-flex justify-content-around align-items-center p-3">
+      <h1>Agenda de contactos</h1>
+      <div>
+        <a href="/contacts">Ver contactos</a>
+      </div>
+    </header>
+    <main class="p-3">
+      <form action="agregar-contacto" method="post">
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            placeholder="Ingresa tu nombre"
+          />
+        </div>
+        <div class="form-group">
+          <label for="number">Número</label>
+          <input
+            type="number"
+            class="form-control"
+            name="number"
+            placeholder="Ingresa tu número"
+          />
+        </div>
+        <div class="form-group">
+          <label for="direction">Dirección</label>
+          <input
+            type="text"
+            class="form-control"
+            name="direction"
+            placeholder="Ingresa tu dirección"
+          />
+        </div>
+        <div class="form-group">
+          <label for="telefone">Teléfono</label>
+          <input
+            type="number"
+            class="form-control"
+            name="telefone"
+            placeholder="Ingresa tu teléfono"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Agregar contacto</button>
+      </form>
+    </main>
+  </body>
+</html>
