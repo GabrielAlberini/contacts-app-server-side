@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Configuración del motor de plantillas EJS
-app.set("views", path.join(__dirname, "../views"));
+app.set("views", path.join(__dirname, "/"));
 app.set("view engine", "ejs");
 
 // Middleware para el manejo de formularios
