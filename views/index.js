@@ -13,7 +13,7 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 
 // Middleware para servir archivos estáticos
-app.use(express.static(path.join(__dirname, "../views")));
+app.use(express.static(path.join(__dirname, "views")));
 
 // Utilización del enrutador
 app.use(router);
