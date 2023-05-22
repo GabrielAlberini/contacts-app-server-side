@@ -1,6 +1,6 @@
 # Contacts App - Express Js
 
-El proyecto XYZ es una aplicación web desarrollada con Node.js, Express, EJS y firebase que permitió realizar una pequeña aplicación web de administración de contactos.
+El proyecto es una aplicación web desarrollada con Node.js, Express, EJS y firebase que permitió realizar una pequeña aplicación web de administración de contactos.
 
 ## Requisitos previos
 
