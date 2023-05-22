@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=  , initial-scale=1.0" />
-    <title>Agenda de Contacto</title>
+    <title>Agenda de contactos</title>
 
     <!-- Boostrap -->
     <link
@@ -16,16 +16,17 @@
   </head>
   <body class="container">
     <header class="d-flex justify-content-around align-items-center p-3">
-      <h1>Agenda de contactos</h1>
+      <h1><%= pageTitle %></h1>
       <div>
         <a href="/contacts">Ver contactos</a>
       </div>
     </header>
     <main class="p-3">
-      <form action="agregar-contacto" method="post">
+      <form action="<%= action %>" method="post">
         <div class="form-group">
           <label for="name">Nombre</label>
           <input
+            value="<%= selected ? selected.name : ''%>"
             type="text"
             class="form-control"
             name="name"
@@ -35,6 +36,7 @@
         <div class="form-group">
           <label for="number">Número</label>
           <input
+            value="<%= selected ? selected.number : ''%>"
             type="number"
             class="form-control"
             name="number"
@@ -44,6 +46,7 @@
         <div class="form-group">
           <label for="direction">Dirección</label>
           <input
+            value="<%= selected ? selected.direction : ''%>"
             type="text"
             class="form-control"
             name="direction"
@@ -53,13 +56,16 @@
         <div class="form-group">
           <label for="telefone">Teléfono</label>
           <input
+            value="<%= selected ? selected.telefone : ''%>"
             type="number"
             class="form-control"
             name="telefone"
             placeholder="Ingresa tu teléfono"
           />
         </div>
-        <button type="submit" class="btn btn-primary">Agregar contacto</button>
+        <button type="submit" class="btn btn-primary">
+          <%= buttonLabel %>
+        </button>
       </form>
     </main>
   </body>

@@ -1,24 +1,19 @@
 import express from "express";
-import {
-  addNewContact,
-  getAllContacts,
-  deleteContact,
-  showForm,
-} from "./controllers/contacts.js";
+import { showForm } from "./utils/showForm.js";
+import { router } from "./router/router.js";
 
 const app = express();
 
+//Ejs config
 app.set("views", "./views");
 app.set("view engine", "ejs");
 
-app.use(express.static("styles"));
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", showForm);
-app.get("/contacts", getAllContacts);
-app.post("/agregar-contacto", addNewContact);
-app.get("/borrar/:id", deleteContact);
+// Routes
+app.use("/", router);
 
+//Server
 app.listen(3000, () => {
-  console.log("Aplicación iniciada en http://localhost:3000");
+  console.log("Started app in http://localhost:3000");
 });
