@@ -3,6 +3,7 @@ import { showForm } from "./utils/showForm.js";
 import { router } from "./router/router.js";
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 //Ejs config
 app.set("views", "./views");
@@ -14,6 +15,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/", router);
 
 //Server
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("Started app in http://localhost:3000");
 });
