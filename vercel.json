@@ -5,5 +5,18 @@
       "src": "index.js",
       "use": "@vercel/node"
     }
+  ],
+  "routes": [
+    { "src": "/contacts", "dest": "/views/index.js" },
+    { "src": "/contacts/post/:id", "dest": "/views/index.js" },
+    { "src": "/contacts", "methods": ["POST"], "dest": "/views/index.js" },
+    { "src": "/contacts/:id", "methods": ["POST"], "dest": "/views/index.js" },
+    { "src": "/contacts/:id", "methods": ["GET"], "dest": "/views/index.js" },
+    {
+      "src": "/contacts/:id",
+      "methods": ["DELETE"],
+      "dest": "/views/index.js"
+    },
+    { "src": "/(.*)", "dest": "/views/index.js" }
   ]
 }
